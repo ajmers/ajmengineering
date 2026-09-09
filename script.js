@@ -1,4 +1,4 @@
-/* AJM Engineering — minimal progressive enhancement */
+/* AJM Engineering: minimal progressive enhancement */
 (function () {
   "use strict";
 
