@@ -325,8 +325,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   color: var(--text-dim);
 }
 
-.about__cv { margin-top: 0.5rem; }
-
 .link-arrow {
   font-family: var(--font-mono);
   font-size: 0.82rem;
