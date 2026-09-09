@@ -1,6 +1,6 @@
 /* ============================================================
    AJM Engineering — styles
-   Minimal / bold. Sharp corners, big display type, one accent.
+   Minimal. Sharp corners, restrained display type, one muted accent.
    ============================================================ */
 
 :root {
@@ -9,7 +9,7 @@
   --text:      #0a0a0a;
   --text-dim:  #57574f;
   --line:      #e2e2da;
-  --accent:    #1f3cff;
+  --accent:    #2f4bb8;
   --accent-ink:#ffffff;
 
   --max: 1140px;
@@ -28,7 +28,7 @@
     --text:      #f4f4ee;
     --text-dim:  #9a9a90;
     --line:      #272724;
-    --accent:    #6b82ff;
+    --accent:    #8b9bdc;
     --accent-ink:#0a0a0a;
   }
 }
@@ -91,8 +91,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .section__head { max-width: 46rem; margin-bottom: clamp(2.5rem, 6vw, 4rem); }
 .section__title {
-  font-size: clamp(2rem, 1.2rem + 3.5vw, 3.4rem);
-  letter-spacing: -0.025em;
+  font-size: clamp(2rem, 1.2rem + 3vw, 2.9rem);
+  letter-spacing: -0.015em;
   margin-top: 0.75rem;
 }
 .section__intro { color: var(--text-dim); margin-top: 1.25rem; max-width: 42rem; }
@@ -201,7 +201,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   justify-content: center;
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.045em;
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.95rem 1.6rem;
@@ -218,10 +218,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ---------- hero ---------- */
 .hero { padding-block: clamp(3.5rem, 10vw, 8rem) clamp(3rem, 8vw, 6rem); }
 .hero__title {
-  font-size: clamp(2.6rem, 1rem + 8vw, 6rem);
-  letter-spacing: -0.035em;
+  font-size: clamp(2.6rem, 1rem + 6.5vw, 4.75rem);
+  letter-spacing: -0.02em;
   margin: 1.5rem 0 0;
-  max-width: 16ch;
+  max-width: 18ch;
 }
 .hero__title .accent { color: var(--accent); }
 .hero__lede {
@@ -235,36 +235,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-}
-
-/* ---------- stats ---------- */
-.stats { border-block: 1px solid var(--line); background: var(--surface); }
-.stats__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding-block: clamp(2.5rem, 6vw, 4rem);
-  gap: clamp(1.5rem, 4vw, 3rem);
-}
-.stat { display: flex; flex-direction: column; gap: 0.5rem; }
-.stat__num {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(2.2rem, 1rem + 4vw, 3.5rem);
-  letter-spacing: -0.03em;
-  line-height: 1;
-}
-.stat__unit {
-  color: var(--accent);
-  font-size: 0.42em;
-  margin-left: 0.15em;
-  letter-spacing: 0;
-}
-.stat__label {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  line-height: 1.4;
-  color: var(--text-dim);
-  letter-spacing: 0.02em;
 }
 
 /* ---------- cards ---------- */
@@ -286,15 +256,15 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   transition: background-color 0.15s ease;
 }
 .section--alt .card { background: var(--surface); }
-.card:hover { background: color-mix(in srgb, var(--accent) 7%, var(--bg)); }
-.section--alt .card:hover { background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
+.card:hover { background: color-mix(in srgb, var(--accent) 4%, var(--bg)); }
+.section--alt .card:hover { background: color-mix(in srgb, var(--accent) 4%, var(--surface)); }
 
 .card--feature { position: relative; }
 .card--feature::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
-  width: 100%; height: 3px;
+  width: 100%; height: 2px;
   background: var(--accent);
 }
 
@@ -423,10 +393,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ---------- contact ---------- */
 .contact { text-align: left; }
 .contact__title {
-  font-size: clamp(2.2rem, 1rem + 5vw, 4.2rem);
-  letter-spacing: -0.03em;
+  font-size: clamp(2.2rem, 1rem + 4vw, 3.4rem);
+  letter-spacing: -0.018em;
   margin: 1rem 0 0;
-  max-width: 18ch;
+  max-width: 20ch;
 }
 .contact__lede {
   margin: 1.5rem 0 2.5rem;
@@ -482,7 +452,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
    Responsive
    ============================================================ */
 @media (max-width: 860px) {
-  .stats__grid { grid-template-columns: repeat(2, 1fr); }
   .cards, .cards--3 { grid-template-columns: 1fr; }
   .job { grid-template-columns: 1fr; }
   .about__cols { grid-template-columns: 1fr; }
@@ -522,6 +491,5 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 @media (max-width: 460px) {
-  .stats__grid { grid-template-columns: 1fr; }
   .hero__actions .btn { width: 100%; }
 }
