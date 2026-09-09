@@ -338,44 +338,28 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .link-arrow::after { content: " \2192"; color: var(--accent); }
 .link-arrow:hover { color: var(--accent); }
 
-/* ---------- timeline / work ---------- */
-.timeline { display: flex; flex-direction: column; gap: 0; }
-.job {
+/* ---------- track record ---------- */
+.proof { display: flex; flex-direction: column; }
+.proof__item {
   display: grid;
-  grid-template-columns: 15rem 1fr;
+  grid-template-columns: 16rem 1fr;
   gap: clamp(1rem, 4vw, 3rem);
   padding-block: clamp(1.75rem, 4vw, 2.75rem);
   border-top: 1px solid var(--line);
 }
-.job:last-child { border-bottom: 1px solid var(--line); }
+.proof__item:last-child { border-bottom: 1px solid var(--line); }
 
-.job__meta { display: flex; flex-direction: column; gap: 0.35rem; }
-.job__co {
+.proof__label {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   letter-spacing: -0.02em;
+  line-height: 1.2;
 }
-.job__role { font-size: 0.95rem; color: var(--text); }
-.job__dates {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  color: var(--text-dim);
-}
-.job__points { display: flex; flex-direction: column; gap: 0.85rem; }
-.job__points li {
-  position: relative;
-  padding-left: 1.35rem;
+.proof__body {
   color: var(--text-dim);
   font-size: 0.98rem;
-}
-.job__points li::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 0.6em;
-  width: 0.5rem; height: 0.5rem;
-  background: var(--accent);
+  max-width: 44rem;
 }
 
 /* ---------- availability ---------- */
@@ -451,7 +435,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
    ============================================================ */
 @media (max-width: 860px) {
   .cards, .cards--3 { grid-template-columns: 1fr; }
-  .job { grid-template-columns: 1fr; }
+  .proof__item { grid-template-columns: 1fr; }
   .about__cols { grid-template-columns: 1fr; }
 
   .nav__toggle { display: block; z-index: 60; }
